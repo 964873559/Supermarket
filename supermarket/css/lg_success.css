@@ -1,0 +1,33 @@
+
+#showframe #show-price {
+	position: absolute;
+	width: 130px;
+	font-family: "Microsoft YaHei";
+	font-size: 18px;
+	right: 15px;
+	margin-top: 15px;
+	z-index: 100;
+}
+#showframe #onegood {
+	position: relative;
+	width: 90%;
+	height: 170px;
+	margin: 15px auto;
+	border-bottom: solid 2px #cfcfcf;
+}
+#showframe #onegood img {
+	margin-left: 20px; 
+	margin-right: 100px;
+	float: left;
+	width: 120px;
+	height: 150px;
+	border: solid 1px black;
+}
+#showframe #onegood button {
+	position: absolute;
+	display: block;
+	width: 80px;
+	height: 30px;
+	margin-left: 560px;
+	bottom: 16px;
+}

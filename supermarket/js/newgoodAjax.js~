@@ -1,0 +1,39 @@
+$(document).ready(function(){
+            $("input#submit").click(function(){
+                    if($("#id").val()=="" || $("#name").val()=="" || $("#inPrice").val()=="" || $("#salePrice").val()=="" || $("#inNum").val()==""){
+                        alert("信息不完整123");
+                    }
+                    else{
+                        $.post("luru.php",{
+                            id: $("#id").val(),
+                            name: $("#name").val(),
+                            inPrice: $("#inPrice").val(),
+                            salePrice: $("#salePrice").val(),
+                            inNum: $("#inNum").val()
+                        },function(data){
+                            alert("123");
+                            $("#newgood").html("123");
+                        },"html"
+                        
+                        );
+                        $("#goodTable").append("
+                            <tr>
+                                <td> $("#id").val() </td>
+                                <td> $("#name").val() </td>
+                                <td> $("#inPrice").val() </td>
+                                <td> $("#salePrice").val() </td>
+                                <td> $("#inNum").val() </td>
+                                <td> $("") </td>
+                                
+                            </tr>
+                            
+                            ");
+                    }
+                });
+        });
+
+
+
+
+
+

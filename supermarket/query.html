@@ -1,0 +1,54 @@
+<?php
+    session_start();
+    include 'islog.php';
+?>
+<html>
+	<head>
+		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>超市售货管理</title>
+		<link rel="shortcut icon" href="images/g5.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/lg_success.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/query.css">
+		<script src="../jquery.js"> </script>
+        <script type="text/javascript" src="js/page.js"></script>
+        <script>
+            $(document).ready(function(){
+                        onload();
+                    });
+        </script>
+        <script src="js/query.js"></script>
+        
+	</head>
+	<body style="background:#f5f5dc">
+		<div id="before-nav">
+			<img src="images/logo.png" style="height:200px;">
+			<span id="logo-font">售货管理系统</span>
+			<div id="welcome"><span>欢迎您！admin</span>
+			<a href="index.html">退出</a></div>
+		</div>
+		<div id="nav">
+			<img src="images/iconfont-iconfonthome.png">
+			<a id="return" href="sales.html">返回首页</a>
+			<ul>
+				<li><a href="newgood.html">进货</a></li>
+				<li><a href="sales_query.html">销售记录</a></li>
+				<li><a href="query.html">查询库存</a></li>
+				<li><a href="javascript:void(0)">更多操作</a></li>
+			</ul>
+		</div>
+		<div id="showframe">
+			<div id="query-nav">
+				<form action="" method="post">
+					<span>代码查询: <input class="text" type="text" name="code" id="id" onkeyup="showfromid(this.value)"></span>
+					<span>名称查询: <input class="text" type="text" name="name" id="name" onkeyup="showfromname(this.value)"></span>
+					<input id="query-button" type="submit" value="查询">
+				</form>
+			</div>
+            <div id="appendGood"></div>
+			<div id="page"></div>
+		</div>
+		<div id="bottom">Version:超市售货管理系统1.0&nbsp;&#169;2015 版权所有6004</div>
+        <script src="js/fixed.js"></script>
+	</body>
+</html>

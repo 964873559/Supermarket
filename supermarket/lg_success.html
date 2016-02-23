@@ -1,0 +1,193 @@
+<?php
+    session_start();
+    
+?>
+<html>
+	<head>
+		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>超市售货管理</title>
+		<link rel="shortcut icon" href="images/g5.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/lg_success.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+        <script src="../jquery.js"></script>
+		<script src="js/lg_success.js"></script>
+        <script type="text/javascript" src="js/page.js"></script>
+        <?php
+                include 'islog.php';
+                $username = $_SESSION['username'];
+                echo"
+                <script> $(document).ready(function(){
+                            welcome('". $username ."');
+                    });
+                </script>
+                    ";
+        ?>
+
+	</head>
+	<body style="background:#f5f5dc">
+		<div id="before-nav">
+			<img src="images/logo.png" style="height:200px;">
+			<span id="logo-font">售货管理系统</span>
+			<div id="welcome"><span id="spanWelcome">请先登陆</span>
+			<a href="logout.php">退出</a></div>
+		</div>
+		<div id="nav">
+			<img src="images/iconfont-iconfonthome.png">
+			<a id="return" href="lg_success.html">返回首页</a>
+			<ul>
+				<li><a href="newgood.html">进货</a></li>
+				<li><a href="sales.html">销售记录</a></li>
+				<li><a href="query.html">查询库存</a></li>
+				<li><a href="javascript:void(0)">更多操作</a></li>
+			</ul>
+		</div>
+		<div id="showframe">
+            <!--
+			<div id="show-price">
+				<form>
+					显示进价：
+					<input type="checkbox" name="show-price"/>
+				</form>
+			</div>
+			
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+			<div id="onegood" class="onegood">
+				<img src="">
+				<h3 style="padding-top:25px">商品代码：0001</h3>
+				<br>
+				<h3>商品名称：软件工程概论</h3>
+				<br>
+				<h3 style="margin-bottom:20px">商品单价：￥250</h3>
+				<button type="button">修改信息</button>
+			</div>
+            -->
+			<div id="page"></div>
+		</div>
+		<div id="bottom">Version:超市售货管理系统1.0&nbsp;&#169;2015 版权所有6004</div>
+	</body>
+</html>

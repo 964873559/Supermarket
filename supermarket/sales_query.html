@@ -1,0 +1,78 @@
+<?php
+    session_start();
+    include 'islog.php';
+?>
+<html>
+	<head>
+		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>超市售货管理</title>
+		<link rel="shortcut icon" href="images/g5.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/sales_query.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+        <script src="../jquery.js"></script>
+		<script type="text/javascript" src="js/page.js"></script>
+        <script src="js/sales_query.js"></script>
+		<script type="text/javascript" src="js/calendar.js"></script>
+    </script>
+	</head>
+	<body style="background:#f5f5dc">
+		<div id="before-nav">
+			<img src="images/logo.png" style="height:200px;">
+			<span id="logo-font">售货管理系统</span>
+			<div id="welcome"><span>欢迎您！admin</span>
+			<a href="index.html">退出</a></div>
+		</div>
+		<div id="nav">
+			<img src="images/iconfont-iconfonthome.png">
+			<a id="return" href="sales.html">返回首页</a>
+			<ul>
+				<li><a href="newgood.html">进货</a></li>
+				<li><a href="sales_query.html">销售记录</a></li>
+				<li><a href="query.html">查询库存</a></li>
+				<li><a href="javascript:void(0)">更多操作</a></li>
+			</ul>
+		</div>
+		<div id="showframe">
+			<div id="query_title">
+				<span>日期：</span><input id="_date" class="text" type="text"  name="date" onclick="new Calendar().show(this);">
+				<span>代码：</span><input id="_id" class="text" type="text" name="code" onkeyup="showFromId(this.value)">
+				<span>名称：</span><input id="_name" class="text" type="text" name="name" onkeyup="showFromName(this.value)">
+			</div>
+			<div id="query_table">
+				<div id="table_top">
+					<table>
+						<tr>
+							<th class="one">代码</th>
+							<th class="two">名称</th>
+							<th class="three">售价</th>
+							<th class="four">售量</th>
+							<th class="five">总价</th>
+							<th class="six">日期</th>
+						</tr>
+					</table>
+				</div>
+				<div id="table_bottom">
+					<table id="tableBottom">
+						<!--tr>
+							<td>001</td>
+							<td>软工概论</td>
+							<td>199</td>
+							<td>88</td>
+							<td>6666</td>
+							<td>1996-04-17</td>
+                            <td style="display:block">123</td>
+						</tr-->
+						
+					</table>
+				</div>
+				<div id="query_table_bottom">
+					<span>进货金额：$<b id="_1">0</b></span>
+					<span>销售金额：$<b id="_2">0</b></span>
+					<span>总利润：$<b id="_3">0</b></span>
+					<input type="button" value="结算" onclick="count()">
+				</div>
+			</div>
+		</div>
+		<div id="bottom">Version:超市售货管理系统1.0&nbsp;&#169;2015 版权所有6004</div>
+	</body>
+</html>

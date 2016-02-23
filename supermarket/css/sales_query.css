@@ -1,0 +1,83 @@
+#query_table {
+	width: 96%;
+	height: 600px;
+	margin: 10px auto;
+	border-radius: 5px;
+	background: #F0F8FF;
+	border: solid 1px #708090;
+	box-shadow: inset 0px 0px 0px 1px #c7c7c7;
+}
+#query_title {
+	width: 700px;
+	margin: 0 auto;
+	height: 30px;
+	font-family: "Microsoft YaHei";
+	font-size: 18px;
+	padding-top: 20px;
+}
+#query_title .text {
+	width: 150px;
+	height: 25px;
+	border-radius: 3px;
+	border: solid 1px #708090;
+	background: #f5f5dc;
+}
+#query_title span {
+	display: inline-block;
+	margin-left: 20px;
+}
+#query_table table {
+	width: 100%;
+	table-layout: fixed;
+	font-family: "Microsoft YaHei";
+	font-size: 18px;
+}
+#query_table table tr th {
+	height: 40px;
+	background: #cfcfcf;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom: solid 1px #708090;
+}
+#query_table #table_top table tr th.six {
+	width: 18.5%;
+}
+#query_table #table_bottom {
+	border-bottom: inset 1px #cfcfcf;
+	box-shadow: inset 0 0 0 1px #708090;
+}
+#query_table table tr td {
+	height: 30px;
+	text-align: center;
+	border-bottom: solid 1px #708090;
+}
+#query_table #table_bottom {
+	height: 500px;
+	overflow-y: auto;
+}
+#query_table #query_table_bottom {
+	width: 95%;
+	height: 50px;
+	margin: 0 auto;
+	font-family: "Microsoft YaHei";
+	font-size: 20px;
+}
+#query_table #query_table_bottom span {
+	display: inline-block;
+	margin: 10px auto;
+	padding-left: 40px;
+}
+#query_table #query_table_bottom input {
+	display: inline-block;
+	position: absolute;
+	width: 65px;
+	height: 25px;
+	background: #EE9A00;
+	margin-top: 12px;
+	margin-left: 25px;
+	border-radius: 3px;
+	border: outset 1px #708090;
+}
+#query_table #query_table_bottom input:active {
+	background: #cfcfcf;
+}

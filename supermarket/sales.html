@@ -1,0 +1,95 @@
+<?php
+    session_start();
+    include 'islog.php';
+?>
+<html>
+	<head>
+		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>超市售货管理</title>
+		<link rel="shortcut icon" href="images/g5.ico"/>
+		<link rel="stylesheet" type="text/css" href="css/sales.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<script src="../jquery.js"></script>
+        <script src="js/sales.js"></script>
+        <script type="text/javascript" src="js/page.js"></script>
+        
+    </script>
+	</head>
+	<body style="background:#f5f5dc">
+		<div id="before-nav">
+			<img src="images/logo.png" style="height:200px;">
+			<span id="logo-font">售货管理系统</span>
+			<div id="welcome"><span>欢迎您！admin</span>
+			<a href="index.html">退出</a></div>
+		</div>
+		<div id="nav">
+			<img src="images/iconfont-iconfonthome.png">
+			<a id="return" href="">返回首页</a>
+			<ul>
+				<li><a href="newgood.html">进货</a></li>
+				<li><a href="sales_query.html">销售记录</a></li>
+				<li><a href="query.html">查询库存</a></li>
+				<li><a href="javascript:void(0)">更多操作</a></li>
+			</ul>
+		</div>
+		<div id="sales-main">
+			<div id="buycar">
+				<span><img src="images/g6.ico">&nbsp;&nbsp;购物车</span>
+				<div id="table-main">
+					<div id="table-head">
+					<table>
+						<tr id="table-title">
+						<td>名称</td>
+						<td>数量</td>
+						<td>总价</td>
+					</tr>
+					</table>
+					</div>	
+					<div id="table-body">
+						<table id="tableBodyTable">
+						    <!--
+                            <tr class='_forSale'>
+							    <td class='_name'>123</td>
+							    <td>123</td>
+							    <td class='_price'>123</td>
+						    </tr>
+                            -->
+					    </table>
+					</div>
+				</div>
+				<div id="buycar-bottom">总计：<b>$</b><b id="allPrice">0</b>
+					<button type="button" onclick="saleAll()">出售</button>
+				</div>
+			</div>
+			<div id="thegoods">
+				<div id="good-table">
+					<div id="good-find">
+						代码：
+						<input class="text" type="text" name="code" id="id" onkeyup="showfromid(this.value)">
+						名称：
+						<input class="text" type="text" name="name" id="name" onkeyup="showfromname(this.value)">
+						<input class="button" type="button" value="查找">
+					</div>
+					<div id="good-Info">
+						<div id="good-head">
+							<table>
+								<tr id="good-title">
+									<td>代码</td>
+									<td>名称</td>
+									<td>单价</td>
+									<td>库存</td>
+									<td>增/减</td>
+								</tr>
+							</table>
+						</div>	
+						<div id="good-body">
+							<table id="goodBodyTable">
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bottom">Version:超市售货管理系统1.0&nbsp;&#169;2015 版权所有6004</div>
+	</body>
+</html>
