@@ -1,0 +1,55 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#first-div {
+	margin:100px auto;
+	width: 500px;
+	overflow: hidden;
+}
+#logo {
+	margin: 0 auto;
+	width: 400px;
+	height: 250px;
+	background: url(../images/logo.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+#form {
+	position: relative;
+	width: 400px;
+	height: 200px;
+	margin: 20px auto;
+	background: #436eee;
+	border-radius: 8px;
+}
+#form .form {
+	display: inline-block;
+	font-family: "Microsoft YaHei";
+	font-size: 25px;
+	margin-left: 20px;
+	padding-top: 20px;
+}
+#form .input-in {
+	padding: 5px;
+	display: inline-block;
+	right: 38px;
+	position: absolute;
+	margin-top: 25px;
+	background-color: black;
+	opacity: 0.5;
+	color: white;
+}
+#form .button {
+	width: 65px;
+	margin-top: 35px;
+	margin-left: 85px; 
+	padding-top: 8px;
+	font-family: "Microsoft YaHei";
+	border-radius: 5px;
+}
+#bottom {
+	font-family: "Microsoft YaHei";
+	font-size: 18px;
+	text-align: center;
+}
