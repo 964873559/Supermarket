@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="LoginDemo"
-  id="myeclipse.1458708716480"
-  context-root="/LoginDemo"
+  name="LoginDemoSSH"
+  id="myeclipse.1462450586803"
+  context-root="/LoginDemoSSH"
   j2ee-spec="6.0"
-  archive="LoginDemo.war">
+  archive="LoginDemoSSH.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>
