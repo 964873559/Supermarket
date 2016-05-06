@@ -9,7 +9,7 @@
   </head>
   
   <body>
-  <h1 align="center" top="50px">登陆成功！</h1>
-  <p align="center" font-size="20px">欢迎您：<s:property value="users.username" />!</p>
+  <h1 align="center" style="top:50px">登陆成功！</h1>
+  <p align="center" style="font-size:20px">欢迎您：<s:property value="username" />!</p>
   </body>
 </html>

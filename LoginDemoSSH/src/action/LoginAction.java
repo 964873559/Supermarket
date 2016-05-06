@@ -31,11 +31,11 @@ public class LoginAction extends ActionSupport {
         	Map session = ActionContext.getContext().getSession();
 			session.put("username", name);
 			System.out.println("登陆成功！");
-            return "SUCCESS";
+            return SUCCESS;
         } else {
             addActionError("用户名/密码不匹配");
             System.out.println("非法用户");
-            return "ERROR";
+            return ERROR;
         }
     }
  
