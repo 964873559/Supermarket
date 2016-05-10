@@ -16,7 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="first-div">
 			<div id="logo"></div>
 			<div id="form">
-				<form action="javascript:void(0)">
+				<form action="login.action" method="post">
 					<span class="form">用户名：</span>
 					<input class="input-in" type="text" name="username">
 					<br>
@@ -43,10 +43,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				function (data) {
 					var value = data.flag;
 					if(value == "登陆成功" ){
-						alert("登陆成功！");
-						location.href = "sales.jsp";
+						console.log(value);
 					}else {
 						alert(value);
+						location.href=window.location.href;
 					}
 				 },"json");
 		}

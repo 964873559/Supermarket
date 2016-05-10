@@ -1,12 +1,23 @@
 package serviceImpl;
 
 import service.ActionManager;
+import dao.SaleDAO;
 import dao.UserDAO;
+import entity.Data;
 
 public class ActionManagerImpl implements ActionManager {
 	private UserDAO userDAO;
+	private SaleDAO saleDAO;
 
-    public UserDAO getUserDAO() {
+    public SaleDAO getSaleDAO() {
+		return saleDAO;
+	}
+
+	public void setSaleDAO(SaleDAO saleDAO) {
+		this.saleDAO = saleDAO;
+	}
+
+	public UserDAO getUserDAO() {
        return this.userDAO;
     }
 
@@ -28,4 +39,20 @@ public class ActionManagerImpl implements ActionManager {
             }
             return null;
     }
+    
+    public Data sale(int code) {
+    	try {
+            Data goods = saleDAO.sale(code);
+            if (goods!= null)
+            {
+               return goods;
+            }
+      }
+      catch (Exception e)
+      {
+             System.out.println(e.getMessage());
+      }
+      return null;
+    }
+
 }

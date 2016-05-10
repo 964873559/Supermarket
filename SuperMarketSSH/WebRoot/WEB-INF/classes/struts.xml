@@ -6,9 +6,12 @@
        	<result name="error" type="json">
    			<param name="includeProperties">flag</param>
    		</result>
-   		<result name="success" type="json">
-   			<param name="includeProperties">flag</param>
-   		</result>
+   		<result name="success">/sales.jsp</result>
        </action>
+       <action name="sale"  class="action.SaleAction">
+       	<result name="success">/sales.jsp</result>
+       	<result name="error">/sales.jsp</result>
+       </action>
+       
     </package>
 </struts>    

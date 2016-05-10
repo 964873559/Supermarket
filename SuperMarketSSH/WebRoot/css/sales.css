@@ -1,0 +1,193 @@
+#sales-main {
+	position: relative;
+	width: 96%;
+	height: 600px;
+	margin: 0 auto;
+}
+#sales-main #buycar {
+	position: absolute;
+	width: 30%;
+	height: 500px;
+	margin-top:50px;
+	margin-left: 50px;
+	background: #F0F8FF;
+	border-radius: 10px;
+	border: solid 2px #708090;
+	box-shadow: outset 0 3px 3px 0 #c7c7c7;
+}
+#sales-main #thegoods {
+	position: absolute;
+	width: 55%;
+	height: 500px;
+	margin-top:50px;
+	background: #F0F8FF;
+	right: 60px;
+	border-radius: 10px;
+	border: solid 2px #708090;
+	box-shadow: outset 0 3px 3px 0 #c7c7c7;
+}
+#sales-main #buycar span {
+	display: block;
+	font-family: "Microsoft YaHei";
+	font-size: 20px;
+	width: 96%;
+	margin: 10px auto;
+	border-bottom: solid 2px #000000;
+
+}
+#sales-main #buycar img {
+	width: 30px;
+	height: 30px;
+}
+#sales-main #buycar #table-main {
+	width: 94%;
+	height: 380px;
+	margin: 0 auto;
+	border-radius: 5px;
+	background: #f5f5dc;
+	overflow: hidden;
+	border: solid 1px #cfcfcf;
+	box-shadow: inset 0px 0px 0px 1px #c7c7c7;
+}
+#sales-main #buycar #table-body {
+	height: 350px;
+	overflow-y: scroll;
+}
+#sales-main #buycar table tr {
+	display: block;
+	height: 30px;
+	font-family: "Microsoft YaHei";
+	font-size: 18px;
+	border-bottom: solid 1px #708090;
+}
+#sales-main #buycar table tr:nth-child(even) {
+	background: #F0F8FF;
+}
+#sales-main #buycar table td {
+	display: block;
+	width: 110px;
+	margin: 0 auto;
+	text-align: center;
+}
+#sales-main #buycar #table-body table td{
+	padding-left: 10px;
+}
+#sales-main #buycar #table-title td{
+	border: solid 2px #cfcfcf;
+	border-top-left-radius: 5px;
+	border-top-right-radius:5px;
+	background: #cfcfcf;
+}
+#buycar-bottom {
+	width: 85%;
+	margin: 10px auto;
+	font-family: "Microsoft YaHei";
+	font-size: 18px;
+}
+#buycar-bottom button {
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	float: right;
+	margin-right: 5%;
+	background: #ff6633;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 1px 0 #ff3333;
+}
+#sales-main #thegoods #good-table {
+	width: 96%;
+	height: 460px;
+	margin: 20px auto;
+	border: solid 1px #cfcfcf;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 0px 1px #c7c7c7
+}
+#sales-main #thegoods #good-find {
+	width: 90%;
+	font-family: "Microsoft YaHei";
+	font-size: 20px;
+	margin: 10px auto;
+}
+#sales-main #thegoods #good-find .button {
+	width: 70px;
+	height: 25px;
+	border-radius: 3px;
+	background:#cdcdcd;
+	box-shadow: outset 0 1px 1px 0 #cfcfcf;
+}
+#sales-main #thegoods #good-find .text {
+	width: 30%;
+	background: #ffffff;
+	opacity: 0.8;
+	height: 25px;
+}
+#sales-main #thegoods #good-Info {
+	width: 96%;
+	height: 390px;
+	margin: 20px auto;
+	border: solid 1px #708090;
+	background: #f5f5dc;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 0px 1px #c7c7c7;
+}
+#sales-main #thegoods #good-title {
+	width: 100%;
+	border: solid 2px #cfcfcf;
+	border-top-left-radius: 5px;
+	border-top-right-radius:5px;
+	background: #cfcfcf;
+	border-bottom: solid 1px #708090;
+}
+#sales-main #good-Info table {
+	font-family: "Microsoft YaHei";
+	font-size: 16px;
+	width: 100%;
+}
+#sales-main #good-Info table tr {
+	display: block;	
+	height: 30px;
+	border-bottom: solid 1px #708090;
+}
+#sales-main #good-Info table td {
+	display: block;
+	width: 115px;
+	margin: 0 auto;
+	text-align: center;
+}
+#sales-main #good-body table tr:nth-child(even) {
+	background: #F0F8FF;
+}
+#sales-main #good-body {
+	height: 350px;
+	overflow-y: scroll;
+}
+#sales-main #good-body a.left {
+	width: 30px;
+	height: 30px;
+	margin-top: 2px;
+	background: url(/SuperMarketSSH/images/jia.png);
+	background-size: 100%;
+	display: inline-block;
+}
+#sales-main #good-body a.right {
+	width: 30px;
+	height: 30px;
+	margin-top: 2px;
+	background: url(/SuperMarketSSH/images/jian.png);
+	background-size: 100%;
+	display: inline-block;
+	margin-left: 33px;
+}
+#sales-main #good-body input {
+	display: inline-block;
+	position: absolute;
+	margin-top: 7px;
+	width: 30px;
+	z-index: 0;
+}
+#sales-main #good-body .add-good {
+	position: relative;	
+	width: 100px;
+	height: 25px;
+	margin: -15px auto;
+}

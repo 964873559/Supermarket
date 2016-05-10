@@ -8,7 +8,7 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver">
 		</property>
-		<property name="url" value="jdbc:mysql://localhost:3306/logindemo">
+		<property name="url" value="jdbc:mysql://localhost:3306/supermarket">
 		</property>
 		<property name="username" value="root"></property>
 		<property name="password" value="hyz123"></property>
@@ -26,7 +26,9 @@
 		</property>
 		<property name="mappingResources">
 			<list>
-				<value>entity/Users.hbm.xml</value></list>
+				<value>entity/User.hbm.xml</value>
+				<value>entity/Data.hbm.xml</value>
+			</list>
 		</property>
 		</bean>
 		
@@ -42,5 +44,15 @@
                 <ref local="sessionFactory" />
             </property>
         </bean>
-        
+        <bean id="saleAction" class="action.SaleAction">
+            <property name="mgr2" ref="mgr2"></property>
+        </bean>       
+        <bean id="mgr2" class="serviceImpl.ActionManagerImpl">
+            <property name="saleDAO" ref="saleDAO"></property>
+        </bean>
+        <bean id="saleDAO" class="daoImpl.SaleDAOImpl">
+            <property name="sessionFactory">
+                <ref local="sessionFactory" />
+            </property>
+        </bean>
 		</beans>

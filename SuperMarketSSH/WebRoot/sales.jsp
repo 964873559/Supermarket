@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -18,12 +19,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div id="before-nav">
 			<img src="images/logo.png" style="height:200px;">
 			<span id="logo-font">售货管理系统</span>
-			<div id="welcome"><span>欢迎您！W_littlewhite</span>
-			<a href="index.html">退出</a></div>
+			<div id="welcome"><span>欢迎您！<s:property value="username"/></span>
+			<a href="login.jsp">退出</a></div>
 		</div>
 		<div id="nav">
 			<img src="images/iconfont-iconfonthome.png">
-			<a id="return" href="">返回首页</a>
+			<a id="return" href="sales.jsp">返回首页</a>
 			<ul>
 				<li><a href="newgood.html">进货</a></li>
 				<li><a href="sales.html">销售记录</a></li>
@@ -46,98 +47,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>	
 					<div id="table-body">
 						<table>
-						
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>123</td>
-							<td>123</td>
-							<td>123</td>
-						</tr>
-						<tr>
-							<td>123</td>
-							<td>123</td>
-							<td>123</td>
-						</tr>
-						<tr>
-							<td>123</td>
-							<td>123</td>
-							<td>123</td>
-						</tr>
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>名称</td>
-							<td>数量</td>
-							<td>总价</td>
-						</tr>
-						<tr>
-							<td>123</td>
-							<td>123</td>
-							<td>123</td>
-						</tr>
-						<tr>
-							<td>123</td>
-							<td>123</td>
-							<td>123</td>
-						</tr>
-						<tr>
-							<td>123</td>
-							<td>123</td>
-							<td>123</td>
-						</tr>
-					</table>
+							
+						</table>
 					</div>
 				</div>
 				<div id="buycar-bottom">总计：￥330
@@ -147,11 +58,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div id="thegoods">
 				<div id="good-table">
 					<div id="good-find">
+					<form action="sale.action" method="get">
 						代码：
 						<input class="text" type="text" name="code">
 						名称：
 						<input class="text" type="text" name="name">
-						<input class="button" type="button" value="查找">
+						<input class="button" type="submit" value="查找">
+					</form>
 					</div>
 					<div id="good-Info">
 						<div id="good-head">
@@ -166,221 +79,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</table>
 						</div>	
 						<div id="good-body">
-							<table>
+							<table id="goodBodyTable">
 								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
-									<td><div class="add-good">
-										<a class="left" href=""></a>
-										<input type="text" name="number">
-										<a class="right" href=""></a>
-									</div></td>
-								</tr>
-								<tr>
-									<td>代码</td>
-									<td>名称</td>
-									<td>单价</td>
-									<td>库存</td>
+									<td><s:property value="code"/></td>
+									<td><s:property value="goodname"/></td>
+									<td><s:property value="goodprice"/></td>
+									<td><s:property value="goodcount"/></td>
 									<td><div class="add-good">
 										<a class="left" href=""></a>
 										<input type="text" name="number">
